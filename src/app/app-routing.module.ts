@@ -1,3 +1,4 @@
+import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 import { MainComponent } from "./pages/main/main.component";
@@ -39,6 +40,11 @@ const routes: Routes = [
     path: "register",
     component: RegisterComponent,
     canActivate: [NonAuthGuard],
+  },
+  {
+    path: "forgot-password",
+    component: ForgotPasswordComponent,
+    canActivate: [NonAuthGuard]
   },
   { path: "**", redirectTo: "" },
 ];
