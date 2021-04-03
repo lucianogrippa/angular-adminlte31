@@ -6,7 +6,7 @@ import {
   Output,
   EventEmitter,
 } from "@angular/core";
-import { AppService } from "src/app/utils/services/app.service";
+import { AppService } from "src/app/services/app.service";
 
 @Component({
   selector: "app-menu-sidebar",

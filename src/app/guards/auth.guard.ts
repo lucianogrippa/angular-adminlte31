@@ -5,6 +5,7 @@ import {
   ActivatedRouteSnapshot,
   RouterStateSnapshot,
   UrlTree,
+  Router,
 } from "@angular/router";
 import { Observable } from "rxjs";
 
@@ -12,6 +13,8 @@ import { Observable } from "rxjs";
   providedIn: "root",
 })
 export class AuthGuard implements CanActivate, CanActivateChild {
+  constructor(private router: Router) {}
+
   canActivate(
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot
@@ -20,7 +23,14 @@ export class AuthGuard implements CanActivate, CanActivateChild {
     | Promise<boolean | UrlTree>
     | boolean
     | UrlTree {
-    return true;
+    let token = localStorage.getItem("token");
+
+    if (!!token && token === "LOGGED_IN") {
+      return true;
+    }
+
+    this.router.navigate(["/login"]);
+    return false;
   }
   canActivateChild(
     next: ActivatedRouteSnapshot,
@@ -30,6 +40,13 @@ export class AuthGuard implements CanActivate, CanActivateChild {
     | Promise<boolean | UrlTree>
     | boolean
     | UrlTree {
-    return true;
+    let token = localStorage.getItem("token");
+
+    if (!!token && token === "LOGGED_IN") {
+      return true;
+    }
+
+    this.router.navigate(["/login"]);
+    return false;
   }
 }

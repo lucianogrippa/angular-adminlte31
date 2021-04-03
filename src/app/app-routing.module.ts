@@ -6,8 +6,8 @@ import { LoginComponent } from "./pages/login/login.component";
 import { ProfileComponent } from "./views/profile/profile.component";
 import { RegisterComponent } from "./pages/register/register.component";
 import { DashboardComponent } from "./views/dashboard/dashboard.component";
-import { AuthGuard } from "./utils/guards/auth.guard";
-import { NonAuthGuard } from "./utils/guards/non-auth.guard";
+import { AuthGuard } from "./guards/auth.guard";
+import { NonAuthGuard } from "./guards/non-auth.guard";
 
 const routes: Routes = [
   {

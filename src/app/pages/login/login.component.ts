@@ -1,5 +1,5 @@
 import { Component, OnInit, OnDestroy, Renderer2 } from "@angular/core";
-import { AppService } from "../../utils/services/app.service";
+import { AppService } from "../../services/app.service";
 import { FormGroup, FormControl, Validators } from "@angular/forms";
 import { ToastrService } from "ngx-toastr";
 
@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit, OnDestroy {
     if (this.loginForm.valid) {
       this.appService.login();
     } else {
-      this.toastr.error("Hello world!", "Toastr fun!");
+      this.toastr.error("Invalid username or password", "Toastr fun!");
     }
   }
 

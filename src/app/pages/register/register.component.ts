@@ -1,6 +1,6 @@
 import { Component, OnInit, Renderer2, OnDestroy } from "@angular/core";
 import { FormGroup, FormControl, Validators } from "@angular/forms";
-import { AppService } from "src/app/utils/services/app.service";
+import { AppService } from "src/app/services/app.service";
 import { ToastrService } from "ngx-toastr";
 
 @Component({
@@ -30,7 +30,7 @@ export class RegisterComponent implements OnInit, OnDestroy {
     if (this.registerForm.valid) {
       this.appService.register();
     } else {
-      this.toastr.error("Hello world!", "Toastr fun!");
+      this.toastr.error("Invalid paramiters", "Toastr fun!");
     }
   }
 
