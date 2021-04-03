@@ -6,7 +6,7 @@ import {
   ElementRef,
   Renderer2,
 } from "@angular/core";
-import { AppService } from "src/app/services/app.service";
+import { AppService } from "src/app/services/app/app.service";
 
 @Component({
   selector: "app-user-dropdown-menu",

@@ -1,3 +1,4 @@
+import { AlertDialogService } from './services/alert-dialog/alert-dialog.service';
 import { BrowserModule } from "@angular/platform-browser";
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from "@angular/core";
 
@@ -25,6 +26,7 @@ import localeEn from "@angular/common/locales/en";
 import { UserDropdownMenuComponent } from "./pages/main/header/user-dropdown-menu/user-dropdown-menu.component";
 import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
 import { NgxSpinnerModule } from "ngx-spinner";
+import { AlertDialogComponent } from './components/alert-dialog/alert-dialog.component';
 
 registerLocaleData(localeEn, "en-EN");
 
@@ -45,6 +47,7 @@ registerLocaleData(localeEn, "en-EN");
     AppButtonComponent,
     UserDropdownMenuComponent,
     ForgotPasswordComponent,
+    AlertDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -59,7 +62,7 @@ registerLocaleData(localeEn, "en-EN");
     NgbModule,
     NgxSpinnerModule
   ],
-  providers: [],
+  providers: [AlertDialogService],
   bootstrap: [AppComponent],
   schemas:[CUSTOM_ELEMENTS_SCHEMA]
 })

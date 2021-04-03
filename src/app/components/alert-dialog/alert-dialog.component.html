@@ -1,0 +1,23 @@
+<ng-template #alertDialog let-modal>
+<div class="modal fade show"  style="display: block; padding-right: 15px;" aria-modal="true" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content bg-{{type}}">
+        <div class="modal-header">
+          <h4 class="modal-title">{{ dialogTitle }}</h4>
+          <button type="button" class="close" (click)="modal.close('alert.close.click')" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p [innerHTML]="dialogMessage"></p>
+        </div>
+        <div class="modal-footer text-right justify-content-between">
+          <button type="button" class="btn btn-{{buttonType}}" (click)="modal.close('alert.close')" > {{ closeLabel }} </button>
+          <button *ngIf="isConfirmDialog" type="button" class="btn btn-{{confirmButtonType}}" (click)="modal.close('alert.confirm')" > {{ confirmLabel }} </button>
+        </div>
+      </div>
+      <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+  </div>
+</ng-template>

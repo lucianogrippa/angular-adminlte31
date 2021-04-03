@@ -1,7 +1,7 @@
 import { FormGroup, Validators, FormControl } from '@angular/forms';
 import { Component, OnInit, Renderer2 } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
-import { AppService } from 'src/app/services/app.service';
+import { AppService } from 'src/app/services/app/app.service';
 
 @Component({
   templateUrl: './forgot-password.component.html',

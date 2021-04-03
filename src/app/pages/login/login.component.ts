@@ -1,5 +1,5 @@
 import { Component, OnInit, OnDestroy, Renderer2 } from "@angular/core";
-import { AppService } from "../../services/app.service";
+import { AppService } from "../../services/app/app.service";
 import { FormGroup, FormControl, Validators } from "@angular/forms";
 import { ToastrService } from "ngx-toastr";
 
