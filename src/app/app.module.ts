@@ -1,5 +1,5 @@
 import { BrowserModule } from "@angular/platform-browser";
-import { NgModule } from "@angular/core";
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from "@angular/core";
 
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
@@ -24,6 +24,7 @@ import { registerLocaleData } from "@angular/common";
 import localeEn from "@angular/common/locales/en";
 import { UserDropdownMenuComponent } from "./pages/main/header/user-dropdown-menu/user-dropdown-menu.component";
 import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
+import { NgxSpinnerModule } from "ngx-spinner";
 
 registerLocaleData(localeEn, "en-EN");
 
@@ -56,8 +57,10 @@ registerLocaleData(localeEn, "en-EN");
       preventDuplicates: true,
     }),
     NgbModule,
+    NgxSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent],
+  schemas:[CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule {}
