@@ -14,6 +14,7 @@ export class AppService {
   constructor(private router: Router) {}
 
   login() {
+    // just only for example the login process is more complicated
     localStorage.setItem("token", "LOGGED_IN");
     this.router.navigate(["/"]);
   }

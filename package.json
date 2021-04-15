@@ -2,7 +2,7 @@
   "name": "angular-adminlte31",
   "version": "0.0.1",
   "scripts": {
-    "start": "node server.js",
+    "start": "ng build  && node server.js",
     "dev:start": "ng serve",
     "dev:build": "ng build --prod",
     "dev:test": "ng test",
